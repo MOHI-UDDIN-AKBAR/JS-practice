@@ -1,2 +1,3 @@
-# LoginForm
-A login form where user can experience login with Email and Password
+# Js Practice
+
+This repository contain small project of js

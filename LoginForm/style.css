@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  /* background-color: #14163e; */
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  /* border: 2px solid red; */
+  width: 700px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  background-color: #14163e;
+  border-radius: 20px;
+  /* position: relative; */
+  overflow: hidden;
+}
+
+.container > .heading {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  height: 160px;
+  width: 100%;
+  position: relative;
+}
+
+.container .heading > h1 {
+  font-size: 25px;
+  color: #dbdbdb;
+  /* border: 2px solid blue; */
+  margin-top: 50px;
+  font-weight: 100;
+}
+
+.container .heading > .login-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+}
+.container .heading .login-type > span {
+  /* border: 2px solid red; */
+  width: 140px;
+  text-align: center;
+  padding: 0.18rem;
+  background-color: #393e67;
+  font-size: 14px;
+  border-radius: 0px 5px 5px 0px;
+  color: rgb(233, 233, 233);
+}
+
+.container .heading .login-type > span:first-child {
+  color: #f03b7a;
+  /* margin-right: 1px; */
+  border-right: 1px solid #14163e;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.form {
+  /* border: 3px solid gold; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.form > :is(.email, .password) {
+  /* border: 2px solid white; */
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+:is(.email, .password) > label {
+  color: #aeb0bf;
+  padding: 0.2rem 0;
+}
+
+:is(.email, .password) > input {
+  width: 100%;
+  padding: 0.5rem 0.3rem;
+  border: 1px solid #1c2159;
+  background-color: #141631;
+  color: #dcdcdc;
+  font-size: 15px;
+  border-radius: 5px;
+}
+
+:is(.email, .password) > input:is(::placeholder, :focus) {
+  color: #7d7d81;
+  font-size: 15px;
+  outline: none;
+}
+.form > .password {
+  position: relative;
+}
+.form .password > small {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  color: #b75477;
+  font-size: 12px;
+}
+
+.sing-in-button {
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  background-color: #f03b7a;
+  padding: 0.5rem;
+  color: rgb(215, 215, 215);
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.container > .sign-up {
+  /* border: 2px solid red; */
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  background-color: #393e67;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.container .sign-up > p {
+  color: #aeb0bf;
+  font-size: 16px;
+  background-color: #393e67;
+  margin-right: 5px;
+}
+
+.container .sign-up > .sign-up-button {
+  width: 80px;
+  background-color: #f03b7a;
+  font-size: 14px;
+  color: rgb(215, 215, 215);
+  font-weight: 600;
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.congrats {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    border-radius: 0;
+  }
+}
