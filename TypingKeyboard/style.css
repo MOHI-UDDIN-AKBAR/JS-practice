@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Moirai+One&display=swap");
+
+* {
+  background-color: rgba(250, 250, 250, 0.351);
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  margin: 20px auto;
+}
+.heading > h1 {
+  font-family: "Moirai One", cursive;
+  font-size: 40px;
+  color: rgb(21, 31, 72);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container > .type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container .type > span {
+  background-color: rgb(21, 31, 72);
+  padding: 0.2rem;
+  margin-top: 50px;
+  width: 100px;
+  margin-right: 2px;
+  cursor: pointer;
+  text-align: center;
+  color: rgb(211, 211, 211);
+}
+
+.container .type > span:first-child {
+  border-radius: 5px 0px 0px 5px;
+  color: rgb(145, 38, 105);
+  font-weight: 600;
+}
+.ami {
+  color: black !important;
+}
+.tomi {
+  color: gold !important;
+}
+.she {
+  color: green !important;
+}
+.container .type > span:last-child {
+  border-radius: 0px 5px 5px 0px;
+}
+.container .paragraph {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.container .paragraph > p {
+  width: 60%;
+  text-align: left;
+  font-size: 20px;
+  color: rgb(218, 216, 216);
+  padding: 0.5rem 0.7rem;
+  background-color: rgb(21, 31, 72);
+  border-radius: 10px;
+  margin: 0 auto;
+  font-family: "Noto Serif Armenian", serif;
+}
+.container .paragraph p > span {
+  background-color: rgb(21, 31, 72);
+}
+.container .paragraph p > span:not(:last-child) {
+  color: green;
+}
+
+.keyboard {
+  margin-top: 20px;
+  width: 60%;
+}
+.keyboard > textarea {
+  resize: none;
+  width: 95%;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 16px;
+  color: white;
+  font-family: "Noto Serif Armenian", serif;
+  outline: none;
+  border: 3px solid rgb(21, 31, 72);
+  background-color: rgb(21, 31, 72);
+  margin: 0 auto;
+}
+
+.keyboard > textarea::placeholder {
+  color: rgb(189, 188, 188);
+}
+@media screen and (max-width: 600px) {
+  .heading > h1 {
+    font-size: 30px;
+  }
+  .container .paragraph > p {
+    width: 90%;
+  }
+  .keyboard {
+    width: 90%;
+  }
+}
