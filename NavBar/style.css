@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > h1 {
+  font-size: 22px;
+  margin: 0;
+  color: rgb(38, 38, 83);
+}
+
+.container > .nav-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.container .nav-container > span {
+  padding: 0.5rem;
+  font-size: 20px;
+  color: #2c4169;
+  cursor: pointer;
+  display: none;
+}
+
+.container .nav-container > .all-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .nav-container .all-bar > span {
+  padding: 0.4rem;
+  width: 80px;
+  text-align: center;
+  margin: 3px 10px;
+  cursor: pointer;
+}
+.container .nav-container .all-bar > span:hover {
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.container > .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.container .icons > span {
+  margin: 10px;
+  font-size: 20px;
+  color: rgb(58, 58, 128);
+}
+
+/* .active {
+  display: flex;
+} */
+
+@media screen and (max-width: 800px) {
+  .container > .icons {
+    display: none;
+  }
+  .container .nav-container > span {
+    display: flex;
+  }
+
+  .container .nav-container > .all-bar {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 50px;
+    right: 0;
+  }
+
+  .container .nav-container .all-bar > span {
+    width: 120px;
+    margin: 3px auto;
+  }
+}
