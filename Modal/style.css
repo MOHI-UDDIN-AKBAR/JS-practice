@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1682686581427-7c80ab60e3f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+:is(.modal-container, .modal-content, .modal) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container > .modal-content {
+  width: 400px;
+  height: 170px;
+  border: 2px solid white;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  position: relative;
+  border-radius: 10px;
+}
+
+.modal-container .modal-content > h1 {
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.modal-container .modal-content > button {
+  width: 100px;
+  padding: 0.2rem;
+  background-color: rgb(119, 119, 158);
+  border: none;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+}
+
+.modal-container .modal-content > button:hover {
+  background-color: rgb(29, 29, 62);
+  color: white;
+}
+
+.modal-container .modal-content > .modal {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 400px;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-container .modal-content .modal > span {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-container > .modal-content {
+    width: 250px;
+    height: 130px;
+  }
+  .modal-container .modal-content > .modal {
+    width: 260px;
+    height: 140px;
+  }
+  .modal-container .modal-content > h1 {
+    font-size: 25px;
+  }
+  .modal-container .modal-content > button {
+    bottom: 13px;
+  }
+  .modal-container .modal-content .modal > span {
+    top: 8px;
+    right: 12px;
+    font-size: 23px;
+  }
+}
