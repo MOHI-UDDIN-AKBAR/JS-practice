@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:is(.container, .sidebar, .all-bar) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+}
+
+.container > .sidebar {
+  width: 220px;
+  margin-left: 5px;
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.container > .menu-icon {
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
+}
+
+.container .menu-icon > i {
+  width: 40px;
+  padding: 0.3rem;
+  text-align: center;
+  cursor: pointer;
+}
+.container .sidebar > .logo-xmark {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .sidebar .logo-xmark > h1 {
+  width: 130px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.container .sidebar .all-bar > span {
+  width: 200px;
+  text-align: center;
+  padding: 0.5rem;
+  border: 2px solid grey;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+.container .sidebar .all-bar > span:hover {
+  border: 2px solid rgb(90, 90, 90);
+  border-radius: 5px;
+}
+
+.container .sidebar .all-bar > span:first-child {
+  margin-top: 20px;
+}
+
+.container .sidebar .logo-xmark > .hide-bar {
+  position: relative;
+  width: 40px;
+  font-size: 25px;
+  padding: 0.3rem;
+  text-align: center;
+  right: 0;
+  cursor: pointer;
+}
+
+.container .sidebar {
+  display: none;
+}
