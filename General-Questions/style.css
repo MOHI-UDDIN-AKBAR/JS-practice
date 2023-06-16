@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:is(.general-questions, .all-questions, .single-question, .question) {
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.general-questions {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.general-questions > h1 {
+  font-family: "Bagel Fat One", cursive;
+  color: rgb(88, 123, 36);
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.general-questions > .all-questions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.general-questions .all-questions > .single-question {
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.general-questions .all-questions .single-question > .question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: left;
+  padding: 0.3rem 0.4rem;
+  flex-direction: row;
+  border: 3px solid rgb(82, 82, 135);
+  background-color: white;
+}
+
+.general-questions
+  .all-questions
+  .single-question
+  .question
+  > span:first-child {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.general-questions .all-questions .single-question .question > span:last-child {
+  color: rgb(40, 40, 100);
+  cursor: pointer;
+}
+
+.general-questions .all-questions .single-question .answer {
+  width: 100%;
+  padding: 0.4rem;
+  text-align: justify;
+  display: none;
+  background-color: white;
+  border: 3px solid rgb(82, 82, 135);
+  border-top: none;
+}
+
+@media screen and (max-width: 600px) {
+  .general-questions .all-questions .single-question {
+    width: 350px;
+  }
+}
