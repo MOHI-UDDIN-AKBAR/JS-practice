@@ -59,6 +59,20 @@ const editGrocery = (e) => {
   editFlag = true;
 };
 
+//----------------clearAllItems-------------------
+const clearAllItems = () => {
+  const allGroceries = document.querySelectorAll(".grocery-item");
+  if (allGroceries.length > 0) {
+    allGroceries.forEach((grocery) => {
+      list.removeChild(grocery);
+    });
+  }
+  container.classList.remove("display-groceries");
+  displayAlert("cleared all Items", "danger");
+  setBackToDefault();
+  localStorage.removeItem("list");
+};
+
 // -------------Add grocery item-------------
 let addItem = (e) => {
   e.preventDefault();
@@ -105,8 +119,29 @@ let addItem = (e) => {
 
 //Event Listeners
 form.addEventListener("submit", addItem);
+clearButton.addEventListener("click", clearAllItems);
 
 //LocalStorage
-const addItemToLocalStorage = (id, value) => {};
-const removeFromLocalStorage = (id) => {};
-const editToLocalStorage = (editID, value) => {};
+const getFromLocalStorage = () => JSON.parse(localStorage.getItem("list"));
+
+const addItemToLocalStorage = (id, value) => {
+  const groceryList = getFromLocalStorage() || [];
+  groceryList.push({ id, value });
+  localStorage.setItem("list", JSON.stringify(groceryList));
+};
+
+const removeFromLocalStorage = (id) => {
+  const groceryList = getFromLocalStorage() || [];
+  const newGroceryList = groceryList.filter((list) => list.id !== id);
+  localStorage.setItem("list", JSON.stringify(newGroceryList));
+};
+const editToLocalStorage = (id, value) => {
+  const groceryList = getFromLocalStorage() || [];
+  const newGroceryList = groceryList.map((list) => {
+    if (list.id === id) {
+      list.value = value;
+    }
+    return list;
+  });
+  localStorage.setItem("list", JSON.stringify(newGroceryList));
+};
