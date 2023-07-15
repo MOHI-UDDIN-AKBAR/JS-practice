@@ -40,7 +40,7 @@ const createElement = (id, value) => {
 
 //------------------displayAlert------------------
 const displayAlert = (text, action) => {
-  alert.innerContent = text;
+  alert.innerText = text;
   alert.classList.add(`color-${action}`);
   setTimeout(() => {
     alert.innerContent = "";
@@ -128,8 +128,8 @@ const clearAllGroceries = () => {
     list.removeChild(grocery);
   });
   container.classList.remove("display-groceries");
-  localStorage.removeItem("lists");
   displayAlert("cleared all items", "danger");
+  localStorage.removeItem("lists");
   setBackToDefault();
 };
 
