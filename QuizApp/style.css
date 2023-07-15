@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:is(body, .quiz, header, .choice) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  max-width: 1400px;
+  height: 100vh;
+  background-color: #4d31bd;
+}
+
+.quiz {
+  width: 500px;
+  height: 400px;
+  max-height: 500px;
+  background-color: #0661c3;
+  border-radius: 10px;
+}
+
+header {
+  width: 80%;
+  flex-direction: row !important;
+  animation: transform 1s ease-in-out infinite alternate;
+  cursor: pointer;
+}
+
+header > .logo {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to right, white, #0699c3, #8fb3ff);
+  border-radius: 47% 53% 34% 66% / 30% 15% 85% 70%;
+  margin-right: 20px;
+}
+
+header > h1 {
+  font-size: 25px;
+  background: linear-gradient(to right, white, #0699c3, #8fb3ff);
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  color: #4a1761;
+}
+
+header:hover {
+  animation-play-state: paused;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > section {
+  padding: 1rem;
+}
+
+form section > h2 {
+  color: #381449;
+  margin-bottom: 15px;
+}
+
+form section > .choice {
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+form section .choice > input {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+form section .choice > p {
+  text-transform: capitalize;
+  padding: 0.2rem;
+}
+
+form section > .choice:last-of-type {
+  margin-bottom: 0px;
+}
+
+form > button {
+  display: grid;
+  place-items: center;
+  width: 80%;
+  height: 60px;
+  font-size: 26px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #0699c3, #6f96e9, #8fb3ff);
+  color: #4a1761;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.output {
+  display: none;
+  padding: 1rem;
+}
+
+.output > h1 {
+  /* background-image: linear-gradient(90deg, red, #8fb3ff); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: transform 1s ease-in-out infinite alternate;
+}
+
+.output h1 > span {
+  font-size: 30px;
+}
+
+.success {
+  background-image: linear-gradient(90deg, #30bd64, #8fb3ff);
+}
+
+.danger {
+  background-image: linear-gradient(90deg, red, #8fb3ff);
+}
+
+@keyframes transform {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1.05, 1.05);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .quiz {
+    width: 100%;
+    height: 400px;
+    max-height: 500px;
+    border-radius: 0px;
+    margin-top: 200px;
+  }
+
+  header > .logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+
+  header > h1 {
+    font-size: 20px;
+    padding: 0.3rem 0.5rem;
+  }
+  form > section {
+    width: 90%;
+    padding: 0.3rem;
+    margin: 0 auto;
+  }
+
+  form section > h2 {
+    margin-bottom: 13px;
+  }
+
+  form section .choice > input {
+    margin-right: 7px;
+    width: 17px;
+    height: 17px;
+  }
+
+  form section > button {
+    width: 80%;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .output {
+    padding: 0.4rem;
+  }
+}
