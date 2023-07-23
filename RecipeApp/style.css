@@ -8,7 +8,7 @@
   --secondary-color: #52648f;
   --recipe-bg-color: #28522e;
   --delete-icon-color: #ba2f1a;
-  --favorite-section-color: #ffffff;
+  --favorite-section-color: #f5f3f3;
   --text-color: #c4a433;
   --placeholder-text-color: #224027;
 }
@@ -17,11 +17,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-img {
-  width: 100px;
-  object-fit: cover;
 }
 
 :is(
@@ -108,7 +103,7 @@ body {
 
 .container main .favorites {
   width: 95%;
-  height: 115px;
+  height: 90px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -117,7 +112,7 @@ body {
   overflow-x: auto;
   background-color: var(--favorite-section-color);
   border-radius: 10px;
-  display: none;
+  /* display: none; */
 }
 
 .container main .favorites::-webkit-scrollbar {
@@ -138,8 +133,8 @@ body {
 }
 
 .container main .favorites .single-favorite-recipe .image img {
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   object-fit: cover;
   border-radius: 50%;
   cursor: pointer;
@@ -169,23 +164,23 @@ body {
   width: 100%;
   font-family: "Lumanosimo", cursive;
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
   text-transform: capitalize;
 }
 
 .container main .random-recipes {
   width: 100%;
-  height: 450px;
+  /* height: 500px; */
   margin-top: 10px;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-y: auto;
-  display: none;
+  /* overflow-y: auto; */
+  /* display: none; */
 }
 
 .container main .random-recipes::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .container main .random-recipes .single-random-recipe {
@@ -224,22 +219,17 @@ body {
 
 .container main .random-recipes .single-random-recipe .highlights > span {
   color: white;
-}
-
-.active-color {
-  color: #d41d6d;
+  cursor: pointer;
 }
 
 .container main .recipe-description {
   width: 100%;
+  display: none;
 }
 
 .container main .recipe-description > .image {
   width: 100%;
   position: relative;
-}
-
-.container main .recipe-description > .image:first-of-type {
 }
 
 .container main .recipe-description > .image > span {
@@ -265,4 +255,21 @@ body {
   color: var(--text-color);
   font-family: "Abel";
   font-size: 14px;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .container main .favorites {
+    width: 85%;
+    padding: 0rem;
+  }
+
+  .container main .random-recipes {
+    width: 100%;
+    /* height: 700px; */
+  }
 }
